@@ -1,0 +1,45 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Önálló 1</h1>
+
+            <ul>
+                <li>Készíts interface-t Auto néven</li>
+                <li>
+                    <ul>
+                        <li>Rendszám (szöveg)</li>
+                        <li>Gyártó (szöveg)</li>
+                        <li>Típus (szöveg)</li>
+                        <li>Hengerűrtartalom (szám)</li>
+                    </ul>
+                </li>
+                <li>Készíts Auto tömböt, abba pedig 3 autó objektumot!</li>
+                <li>Az Auto tömb tartalmát ngFor segítségével jelenítsd meg egy bootstrap táblában.</li>
+            </ul>
+
+            <h3>Autók tömb</h3>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Rendszám</th>
+                        <th>Gyártó</th>
+                        <th>Típus</th>
+                        <th>Hengerűrtartalom</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let a of autok">
+                        <td>{{a.rendszam}}</td>
+                        <td>{{a.gyarto}}</td>
+                        <td>{{a.tipus}}</td>
+                        <td>{{a.hengerurtartalom}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

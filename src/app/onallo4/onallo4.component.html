@@ -1,0 +1,91 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Önálló 4</h1>
+
+            <ul>
+                <li>Készíts interfacet Karóra néven</li>
+                <ul>
+                    <li>Referenciszám: szöveg</li>
+                    <li>Gyártó: szöveg</li>
+                    <li>Típus: szöveg</li>
+                    <li>Anyag: enum (acel, titán, kerámia stb)</li>
+                    <li>Szerkezet: logikai</li>
+                    <li>Ár: szám</li>
+                    <li>GyartasiIdo: datum</li>
+                </ul>
+                <li>
+                    Készíts űrlapot, amin Karórákat lehet felvinni.
+                </li>
+                <ul>
+                    <li>Minden karóra adattaghoz készíts inputot.</li>
+                </ul>
+                <li>A karórák gombnyomásra legyenek felvive.</li>
+                <li>A karórák minden adatát jelenítsd meg egy BS </li>
+            </ul>
+
+            <form>
+                <div class="form-group my-3">
+                    <label class="form-label" for="referenciaszam">Referenciaszám</label>
+                    <input [(ngModel)]="referenciaszam" class="form-control" type="text" name="referenciaszam" id="referenciaszam"></div>
+                <div class="form-group my-3">
+                    <label class="form-label" for="gyarto">Gyártó</label>
+                    <input [(ngModel)]="gyarto" class="form-control" type="text" name="gyarto" id="gyarto"></div>
+                <div class="form-group my-3">
+                    <label class="form-label" for="tipus">Típus</label>
+                    <input [(ngModel)]="tipus" class="form-control" type="text" name="tipus" id="tipus"></div>
+                <div class="form-group my-3">
+                    <label class="form-label" for="anyag">Anyag</label>
+                    <select [(ngModel)]="anyag" class="form-control" name="anyag" id="anyag">
+                        <option value="acel">Acél</option>
+                        <option value="titan">Titán</option>
+                        <option value="keramia">Kerámia</option>
+                        <option value="kaucsuk">Kaucsuk</option>
+                    </select>
+                </div>
+                <div class="form-group my-3">
+                    <input [(ngModel)]="szerkezet" type="checkbox" name="szerkezet" id="szerkezet">
+                    <label class="form-label" for="szerkezet">Mechanikus</label>
+                </div>
+                <div class="form-group my-3">
+                    <label class="form-label" for="ar">Ár</label>
+                    <input [(ngModel)]="ar" class="form-control" type="number" name="ar" id="ar">
+                </div>
+                <div class="form-group my-3">
+                    <label class="form-label" for="gyartasiIdo">Gyártási idő</label>
+                    <input [(ngModel)]="gyartasiIdo" class="form-control" type="date" name="gyartasiIdo" id="gyartasiIdo"></div>
+                    
+                    <button (click)="felvitel()" type="button" class="btn btn-primary">Felvitel</button>
+                </form>
+
+                <table class="table table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>Referenciaszám</th>
+                            <th>Gyártó</th>
+                            <th>Típus</th>
+                            <th>Anyag</th>
+                            <th>Szerkezet</th>
+                            <th>Ár</th>
+                            <th>Gyártási idő</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let k of karorak">
+                            <td>{{k.referenciaszam}}</td>
+                            <td>{{k.gyarto}}</td>
+                            <td>{{k.tipus}}</td>
+                            <td>{{k.anyag}}</td>
+                            <td>{{(k.szerkezet) ? "mechanikus" : "quartz"}}</td>
+                            <td>{{k.ar | number: '1.2-2'}} Ft</td>
+                            <td>{{k.gyartasiIdo | date: 'YYYY-MM-dd HH:mm:ss'}}</td>                            
+                        </tr>
+                    </tbody>
+                    
+
+                </table>
+
+        </div>
+
+    </div>
+</div>

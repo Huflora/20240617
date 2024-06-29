@@ -1,0 +1,23 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Databinding</h1>
+
+            <!--Interpoláció-->
+            <h3>{{interpolacio}}</h3>
+
+            <!--Property binding-->
+            <img [src]="utvonal" [alt]="alternativ" [title]="cim" [width]="szelesseg">
+            <!--Event binding--><br>
+            <button type="button" (click)="uzenet()" class="btn btn-primary">Alert</button>
+
+            <!--Two way binding-->
+            <label for="oldalA">A oldal mérete: </label><br>
+            <input [(ngModel)]="aOldalValtozo" type="number" name="aOldal" id="oldalA">
+        
+            <p>A négyzet oldala: {{aOldalValtozo}}</p>
+            <p>Az {{aOldalValtozo}} oldalú négyzet területe: {{aOldalValtozo * 2}}</p>
+            <p>Az {{aOldalValtozo}} oldalú négyzet kerülete: {{aOldalValtozo * 4}}</p>
+        </div>
+    </div>
+</div>

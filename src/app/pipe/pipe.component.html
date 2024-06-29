@@ -1,0 +1,73 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Pipe</h1>
+
+            <h3>Szövegek</h3>
+
+            <h4 class="mt-5">Alapértelmezett szöveg</h4>
+            <p>{{mintaSzoveg}}</p>
+
+            <h4 class="mt-5">Kisbetűs kiírás</h4>
+            <p>{{mintaSzoveg | lowercase}}</p>
+
+            <h4 class="mt-5">Nagybetűs kiírás</h4>
+            <p>{{mintaSzoveg | uppercase}}</p>
+
+            <h4 class="mt-5">Nagy kezdőbetűs kiírás</h4>
+            <p>{{mintaSzoveg | titlecase}}</p>
+
+            <hr>
+
+            <h3>Számok</h3>
+
+            <h4 class="mt-5">Eredeti szám</h4>
+            <p>{{mintaSzam}}</p>
+
+            <h4 class="mt-5">Egész számra kerekítés</h4>
+            <p>{{mintaSzam | number: '1.0-0'}}</p>
+
+            <h4 class="mt-5">Vezető nullák</h4>
+            <p>{{mintaSzam | number: '4.0-0'}}</p>
+
+            <h4 class="mt-5">Min. 0 max. 2. tizedesjegy</h4>
+            <p>{{mintaSzam | number: '1.0-2'}}</p>
+
+            <h4 class="mt-5">Százalék</h4>
+            <p>{{szazalekErtek | percent: '4.0-2'}}</p>
+            <p>{{szazalekErtek2 | percent: '1.0-2'}}</p>
+
+            <hr>
+
+            <h3>Valuta</h3>
+            <h4 class="mt-5">Valuta értékek</h4>
+            <p>{{valutaErtek | currency: 'EUR'}}</p>
+            <p>{{valutaErtek | currency: 'USD'}}</p>
+            <p>{{valutaErtek | currency: 'GBP'}}</p>
+            <p>{{valutaErtek | currency: 'HUF'}}</p>
+
+            <hr>
+
+            <h3>Dátumok</h3>
+
+            <h4 class="mt-5">Rövid teljes dátum</h4>
+            <p>{{maiDatum | date: 'short'}}</p>
+
+            <h4 class="mt-5">Hosszú teljes dátum</h4>
+            <p>{{maiDatum | date: 'long'}}</p>
+
+            <h4 class="mt-5">Rövid dátum</h4>
+            <p>{{maiDatum | date: 'shortDate'}}</p>
+
+            <h4 class="mt-5">Hosszú dátum</h4>
+            <p>{{maiDatum | date: 'longDate'}}</p>
+
+            <h4 class="mt-5">Rövid idő</h4>
+            <p>{{maiDatum | date: 'shortTime'}}</p>
+
+            <h4 class="mt-5">Hosszú idő</h4>
+            <p>{{maiDatum | date: 'longTime'}}</p>
+
+        </div>
+    </div>
+</div>

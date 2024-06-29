@@ -1,0 +1,27 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Önálló 2</h1>
+
+            <ul>
+                <li>Készíts űrlapot, amin neveket lehet felvinni!</li>
+                <li>Az inputot two-way bindiggal kösd össze egy typescript változóval.</li>
+                <li>Készíts TS tömböt a nevek tárolására.</li>
+                <li>A TS változót gombnyomásra (event building) helyezd el egy tömbben.</li>
+                <li>A HTML-en ngfor segítségével írd ki a neveket egy számozatlan listában.</li>
+            </ul>
+
+            <form>
+                <Label class="form-label" for="nev">Név</Label><br>
+                <input class="form-control" placeholder="Név" type="text" name="nev" id="nev" [(ngModel)]="nevValtozo">
+
+                <button class="btn btn-primary" type="button" (click)="Felvitel()">Felvitel</button>
+
+                <ul>
+                    <li *ngFor="let nev of nevek">{{nev}}</li>
+                </ul>
+
+            </form>
+        </div>
+    </div>
+</div>
